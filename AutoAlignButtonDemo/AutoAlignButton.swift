@@ -12,11 +12,11 @@ protocol LineTagViewDelegate:NSObjectProtocol {
     func BtnClickIndex(index:Int)
 }
 
-class LineTagView: UIView {
+class AutoAlignButton: UIView {
     weak var delegate:LineTagViewDelegate?
-    var textColor:UIColor = UIColor.blackColor()
-    var borderColor:UIColor = UIColor.blackColor()
-    var font:UIFont = UIFont.systemFontOfSize(13.0)
+    var textColor:UIColor = UIColor.black
+    var borderColor:UIColor = UIColor.black
+    var font:UIFont = UIFont.systemFont(ofSize: 13.0)
     
     var widthOfButtonArray:NSMutableArray = [0]
     var scrollView = UIScrollView()
@@ -29,17 +29,16 @@ class LineTagView: UIView {
     
     internal override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.whiteColor()
+        self.backgroundColor = UIColor.white
         self.setupScrollView()
     }
     func setupScrollView() {
-        scrollView.backgroundColor = UIColor.whiteColor()
+        scrollView.backgroundColor = UIColor.white
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
         self.addSubview(scrollView)
     }
     private func setupViews() {
-        
         self.setupButton()
         
         self.layoutSubviews()
@@ -47,24 +46,24 @@ class LineTagView: UIView {
     
     func setupButton() {
         for i in 0..<itemsArray.count {
-            btn = UIButton(type: .Custom)
+            btn = UIButton(type: .custom)
             btn?.titleLabel!.font = font
             btn?.layer.masksToBounds = true
             btn?.layer.borderWidth = 1
-            btn?.layer.borderColor = borderColor.CGColor
+            btn?.layer.borderColor = borderColor.cgColor
             btn?.layer.cornerRadius = 3
             btn?.tag = 100 + i
-            btn?.addTarget(self, action: #selector(self.handleClick), forControlEvents: .TouchUpInside)
-            btn?.setTitleColor(textColor, forState: .Normal)
+            btn?.addTarget(self, action: #selector(self.handleClick), for: .touchUpInside)
+            btn?.setTitleColor(textColor, for: .normal)
             
             str = itemsArray[i] as! String
-            btn?.setTitle(str, forState: .Normal)
-            var titleSize: CGSize = str.sizeWithAttributes([NSFontAttributeName: UIFont(name: btn!.titleLabel!.font.fontName, size: btn!.titleLabel!.font.pointSize)!])
+            btn?.setTitle(str, for: .normal)
+            var titleSize: CGSize = str.size(attributes: [NSFontAttributeName: UIFont(name: btn!.titleLabel!.font.fontName, size: btn!.titleLabel!.font.pointSize)!])
             titleSize.height += 15
             titleSize.width += 20
             widthOfButtonArray[i + 1] = titleSize.width
             buttonOfX = 3 + CGFloat(widthOfButtonArray[i] as! NSNumber) + buttonOfX
-            btn?.frame = CGRectMake(buttonOfX, 4, titleSize.width, titleSize.height)
+            btn?.frame = CGRect(x:buttonOfX, y:4, width:titleSize.width, height:titleSize.height)
             
             all = 0
             all = buttonOfX + titleSize.width + 3
@@ -75,9 +74,8 @@ class LineTagView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        scrollView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)
-        scrollView.contentSize=CGSizeMake(all, 30)
-
+        scrollView.frame = CGRect(x:0, y:0, width:self.frame.size.width, height:self.frame.size.height)
+        scrollView.contentSize=CGSize(width:all, height:30)
     }
     
     func removeView() {
@@ -102,7 +100,7 @@ class LineTagView: UIView {
     
     func handleClick(btn: UIButton) {
         let index = btn.tag - 100
-        delegate?.BtnClickIndex(index)
+        delegate?.BtnClickIndex(index: index)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
