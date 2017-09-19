@@ -3,25 +3,30 @@
   viewController 调用方法：
   
   ```swift
-     myView = LineTagView(frame: CGRectMake(0,100, self.view.frame.size.width, 39))
-     myView?.delegate = self
-     myView?.borderColor = UIColor.brownColor()
-     myView?.textColor = UIColor.brownColor()
-     myView?.font = UIFont.systemFontOfSize(13)
-     myView?.itemsArray = ["龟苓膏","华佗金散","鹤顶红","人参","鳖","白吃丸吃丸"]
-     self.view.addSubview(myView!)
-     myView?.reloadData()
+var autoButton = LineTagView()
+let listArray = ["人参","鳖","白吃丸吃丸","欧赔","龟苓膏","华佗金散","鹤顶红","华佗金散","鹤顶红","人参","鳖"]
+
+autoButton = LineTagView(frame: CGRect(x:0,y:400, width:self.view.frame.size.width, height:39))
+autoButton.delegate = self
+autoButton.borderColor = UIColor.brown
+autoButton.textColor = UIColor.brown
+autoButton.font = UIFont.systemFont(ofSize: 13)
+autoButton.itemsArray = listArray as! NSMutableArray
+self.view.addSubview(autoButton)
+
+autoButton.reloadData()
   ```
   
   Delegate  && 更新方法：
   
   ```swift
-    extension ImagesBrowseViewController:LineTagViewDelegate {
+extension ViewController:LineTagViewDelegate {
     func BtnClickIndex(index: Int) {
-        print("Index-----:\(index)")
-        myView?.frame = CGRectMake(0,100, self.view.frame.size.width / 2, 42)
-        myView?.itemsArray = ["人参","鳖","白吃丸吃丸","欧赔","龟苓膏","华佗金散","鹤顶红","华佗金散","鹤顶红","人参","鳖"]
-        myView?.reloadData()
+//        myView = LineTagView(frame: CGRect(x:0,y:400, width:self.view.frame.size.width / 2, height:42))
+//        myView.itemsArray = ["人参","鳖","白吃丸吃丸","欧赔","龟苓膏","华佗金散","鹤顶红","华佗金散","鹤顶红","人参","鳖"]
+//        myView.reloadData()
+        print("isSelected:\(listArray[index])")
+        
     }
 }
   ```
