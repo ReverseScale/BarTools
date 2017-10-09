@@ -1,6 +1,6 @@
 //
-//  LineTagView.swift
-//  BrgHdr
+//  AutoAlignButton.swift
+//  AutoAutoAlignButtonSwift
 //
 //  Created by StevenXie on 16/8/18.
 //  Copyright © 2016年 Stephen. All rights reserved.

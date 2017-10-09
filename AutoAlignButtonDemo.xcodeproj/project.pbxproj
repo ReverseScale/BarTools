@@ -15,6 +15,9 @@
 		3402EDBA1F7102F100B46571 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402EDB71F7102F100B46571 /* ViewController.swift */; };
 		3402EDBB1F7102F100B46571 /* AutoAlignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402EDB81F7102F100B46571 /* AutoAlignButton.swift */; };
 		3402EDBC1F7102F100B46571 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3402EDB91F7102F100B46571 /* Main.storyboard */; };
+		341688691F8B1FE20001D8D3 /* MultiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341688681F8B1FE20001D8D3 /* MultiViewController.swift */; };
+		3416886B1F8B200A0001D8D3 /* MultiButtonTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416886A1F8B200A0001D8D3 /* MultiButtonTagView.swift */; };
+		3416886D1F8B20A00001D8D3 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416886C1F8B209F0001D8D3 /* TagCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		3402EDB71F7102F100B46571 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3402EDB81F7102F100B46571 /* AutoAlignButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoAlignButton.swift; sourceTree = "<group>"; };
 		3402EDB91F7102F100B46571 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		341688681F8B1FE20001D8D3 /* MultiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiViewController.swift; sourceTree = "<group>"; };
+		3416886A1F8B200A0001D8D3 /* MultiButtonTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiButtonTagView.swift; sourceTree = "<group>"; };
+		3416886C1F8B209F0001D8D3 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,10 @@
 			children = (
 				3402ED891F7102D100B46571 /* AppDelegate.swift */,
 				3402EDB71F7102F100B46571 /* ViewController.swift */,
+				341688681F8B1FE20001D8D3 /* MultiViewController.swift */,
+				3416886C1F8B209F0001D8D3 /* TagCell.swift */,
 				3402EDB81F7102F100B46571 /* AutoAlignButton.swift */,
+				3416886A1F8B200A0001D8D3 /* MultiButtonTagView.swift */,
 				3402EDB91F7102F100B46571 /* Main.storyboard */,
 				3402ED901F7102D100B46571 /* Assets.xcassets */,
 				3402ED921F7102D100B46571 /* LaunchScreen.storyboard */,
@@ -265,6 +274,9 @@
 			files = (
 				3402EDBA1F7102F100B46571 /* ViewController.swift in Sources */,
 				3402ED8A1F7102D100B46571 /* AppDelegate.swift in Sources */,
+				3416886D1F8B20A00001D8D3 /* TagCell.swift in Sources */,
+				341688691F8B1FE20001D8D3 /* MultiViewController.swift in Sources */,
+				3416886B1F8B200A0001D8D3 /* MultiButtonTagView.swift in Sources */,
 				3402EDBB1F7102F100B46571 /* AutoAlignButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +518,7 @@
 				3402EDB01F7102D100B46571 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3402EDB11F7102D100B46571 /* Build configuration list for PBXNativeTarget "AutoAlignButtonDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +527,7 @@
 				3402EDB31F7102D100B46571 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3402EDB41F7102D100B46571 /* Build configuration list for PBXNativeTarget "AutoAlignButtonDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +536,7 @@
 				3402EDB61F7102D100B46571 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
