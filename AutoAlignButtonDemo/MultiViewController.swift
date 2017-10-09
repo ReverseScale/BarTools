@@ -18,12 +18,13 @@ class MultiViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.listTableView  = UITableView(frame:CGRect(x:0,y:0,width:self.view.frame.size.width,height:self.view.frame.size.height), style: .grouped)
-        self.listTableView?.dataSource = self
-        self.listTableView?.delegate = self
-        self.listTableView?.register(TagCell.self, forCellReuseIdentifier: String(describing: TagCell.self))
-        self.view .addSubview(self.listTableView!)
+        
+        listTableView = UITableView(frame:CGRect(x:0,y:0,width:self.view.frame.size.width,height:self.view.frame.size.height), style: .plain)
+        
+        listTableView?.dataSource = self
+        listTableView?.delegate = self
+        listTableView?.register(TagCell.self, forCellReuseIdentifier: String(describing: TagCell.self))
+        view.addSubview(listTableView!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,11 +34,9 @@ class MultiViewController: UIViewController,UITableViewDelegate,UITableViewDataS
 }
 extension MultiViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView .dequeueReusableCell(withIdentifier: String(describing: TagCell.self)) as! TagCell
         cell.setTextArray(textArray: self.dataArray as NSArray, row: indexPath.section)
         return cell;
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -48,7 +47,6 @@ extension MultiViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return TagCell.cellHeight(textArray: self.dataArray as NSArray, row: indexPath.section)
