@@ -38,8 +38,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbX-1T-Am6">
-                                <rect key="frame" x="143.5" y="318.5" width="88" height="30"/>
-                                <state key="normal" title="Show Button"/>
+                                <rect key="frame" x="156.5" y="318.5" width="62" height="30"/>
+                                <state key="normal" title="更新数据"/>
                                 <connections>
                                     <action selector="showClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NJa-CG-ELy"/>
                                 </connections>

@@ -15,7 +15,7 @@ protocol LineTagViewDelegate:NSObjectProtocol {
 class AutoAlignButton: UIView {
     weak var delegate:LineTagViewDelegate?
     var textColor:UIColor = UIColor.black
-    var borderColor:UIColor = UIColor.black
+    var bordersColor:UIColor = UIColor.black
     var font:UIFont = UIFont.systemFont(ofSize: 13.0)
     
     var widthOfButtonArray:NSMutableArray = [0]
@@ -24,7 +24,12 @@ class AutoAlignButton: UIView {
     var allWidth:CGFloat = 0
     var all:CGFloat = 0
     var str: String = ""
-    var itemsArray:NSMutableArray = []
+    var itemsArray:NSMutableArray = []{
+        didSet{
+            removeView()
+            setupButton()
+        }
+    }
     var btn: UIButton?
     
     internal override init(frame: CGRect) {
@@ -39,8 +44,6 @@ class AutoAlignButton: UIView {
         self.addSubview(scrollView)
     }
     private func setupViews() {
-        self.setupButton()
-        
         self.layoutSubviews()
     }
     
@@ -50,7 +53,7 @@ class AutoAlignButton: UIView {
             btn?.titleLabel!.font = font
             btn?.layer.masksToBounds = true
             btn?.layer.borderWidth = 1
-            btn?.layer.borderColor = borderColor.cgColor
+            btn?.layer.borderColor = bordersColor.cgColor
             btn?.layer.cornerRadius = 3
             btn?.tag = 100 + i
             btn?.addTarget(self, action: #selector(self.handleClick), for: .touchUpInside)
@@ -69,13 +72,11 @@ class AutoAlignButton: UIView {
             all = buttonOfX + titleSize.width + 3
             scrollView.addSubview(btn!)
         }
-
+        scrollView.contentSize = CGSize(width:all, height:30)
     }
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         scrollView.frame = CGRect(x:0, y:0, width:self.frame.size.width, height:self.frame.size.height)
-        scrollView.contentSize=CGSize(width:all, height:30)
     }
     
     func removeView() {
@@ -84,19 +85,9 @@ class AutoAlignButton: UIView {
         allWidth = 0
         all = 0
         
-        if itemsArray.count != 0 {
-            for i in 0..<itemsArray.count {
-                (self.viewWithTag(i + 100) as? UIButton)?.removeFromSuperview()
-            }
-        }
+        scrollView.removeAllSubViews()
+        scrollView.contentSize = CGSize(width:0, height:30)
     }
-    
-    func reloadData() {
-        self.removeView()
-        
-        self.setupViews()
-    }
-    
     
     func handleClick(btn: UIButton) {
         let index = btn.tag - 100
@@ -107,3 +98,8 @@ class AutoAlignButton: UIView {
     }
 }
 
+extension UIView {
+    func removeAllSubViews() {
+        subviews.forEach {$0.removeFromSuperview()}
+    }
+}
