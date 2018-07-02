@@ -9,9 +9,9 @@
 | ![](http://og1yl0w9z.bkt.clouddn.com/18-7-2/77947428.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-7-2/14086619.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-7-2/57675645.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-7-2/14345509.jpg) |
 
 
-## 🛠 配置
+## 🛠 使用
 
-### 设置声明
+### 简单的单行单选
 ```swift
 /// 声明控件
     lazy var autoBtn:AutoAlignView = {
@@ -44,6 +44,23 @@
 
 ```swift
    listArray = ["人参","鳖","白吃丸吃丸","欧赔","龟苓膏","华佗金散","鹤顶红","华佗金散","鹤顶红","人参","鳖"]
+```
+
+### 简单的多行多选
+```swift
+    var dataArray:Array<Any>{
+        return ["人参","鳖","白吃丸吃丸","欧赔","龟苓膏","华佗金散","鹤顶红","华佗金散","鹤顶红","人参","鳖","鳖","白吃丸吃丸","欧赔","龟苓膏","华佗金散","鹤顶红","华佗金散","鹤顶红","人参","鳖","鳖","白吃丸吃丸","欧赔","龟苓膏","华佗金散","鹤顶红","华佗金散","鹤顶红","人参","鳖"]
+    }
+```
+
+tableView 的 Cell 实现
+
+```swift
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView .dequeueReusableCell(withIdentifier: String(describing: MultipleCell.self)) as! MultipleCell
+        cell.setTextArray(textArray: self.dataArray as NSArray, row: indexPath.section)
+        return cell;
+    }
 ```
 
 
