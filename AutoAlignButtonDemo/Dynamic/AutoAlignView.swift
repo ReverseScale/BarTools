@@ -12,7 +12,7 @@ protocol LineTagViewDelegate:NSObjectProtocol {
     func BtnClickIndex(index:Int)
 }
 
-class AutoAlignButton: UIView {
+class AutoAlignView: UIView {
     weak var delegate:LineTagViewDelegate?
     var textColor:UIColor = UIColor.black
     var bordersColor:UIColor = UIColor.black
@@ -61,7 +61,7 @@ class AutoAlignButton: UIView {
             
             str = itemsArray[i] as! String
             btn?.setTitle(str, for: .normal)
-            var titleSize: CGSize = str.size(attributes: [NSFontAttributeName: UIFont(name: btn!.titleLabel!.font.fontName, size: btn!.titleLabel!.font.pointSize)!])
+            var titleSize: CGSize = str.size(withAttributes: [kCTFontAttributeName as NSAttributedStringKey: UIFont(name: btn!.titleLabel!.font.fontName, size: btn!.titleLabel!.font.pointSize)!])
             titleSize.height += 15
             titleSize.width += 20
             widthOfButtonArray[i + 1] = titleSize.width
@@ -89,7 +89,7 @@ class AutoAlignButton: UIView {
         scrollView.contentSize = CGSize(width:0, height:30)
     }
     
-    func handleClick(btn: UIButton) {
+    @objc func handleClick(btn: UIButton) {
         let index = btn.tag - 100
         delegate?.BtnClickIndex(index: index)
     }

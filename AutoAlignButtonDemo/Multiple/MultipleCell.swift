@@ -10,19 +10,19 @@ import UIKit
 let screenWidth:CGFloat = UIScreen.main.bounds.size.width
 let screenheight:CGFloat = UIScreen.main.bounds.size.height
 
-class TagCell: UITableViewCell {
+class MultipleCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    var tagView:MultiButtonTagView!
+    var tagView:MultipleTagView!
    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle  = .none
-        self.tagView = MultiButtonTagView.init(totalTagNum: 30, viewWidth: screenWidth-20, eachNum: 0, hmargin: 10, vmargin: 10, tagheight: 30, tagTextFont: UIFont.systemFont(ofSize: 14), tagTextColor: UIColor.red.withAlphaComponent(0.5), selectedTagTextColor: UIColor.white, selectedBackgroundColor: UIColor.red.withAlphaComponent(0.5))
+        self.tagView = MultipleTagView.init(totalTagNum: 30, viewWidth: screenWidth-20, eachNum: 0, hmargin: 10, vmargin: 10, tagheight: 30, tagTextFont: UIFont.systemFont(ofSize: 14), tagTextColor: UIColor.red.withAlphaComponent(0.5), selectedTagTextColor: UIColor.white, selectedBackgroundColor: UIColor.red.withAlphaComponent(0.5))
         self.tagView?.maxSelectNum = 10
         self.contentView.addSubview(self.tagView)
         self.tagView .selectBlockAction { (array) in
@@ -61,7 +61,7 @@ class TagCell: UITableViewCell {
             eachNum = 3
         }
         
-        height = MultiButtonTagView.returnViewHeight(tagTexts: textArray as! Array<Any>, viewWidth: screenWidth-20, eachNum: eachNum, hmargin: 10, vmargin: 10, tagHeight: 30, tagTextFont: UIFont.systemFont(ofSize: 14))
+        height = MultipleTagView.returnViewHeight(tagTexts: textArray as! Array<Any>, viewWidth: screenWidth-20, eachNum: eachNum, hmargin: 10, vmargin: 10, tagHeight: 30, tagTextFont: UIFont.systemFont(ofSize: 14))
         
         return height + 20
     }

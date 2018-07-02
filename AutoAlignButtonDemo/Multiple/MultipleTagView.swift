@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MultiButtonTagView: UIView {
+class MultipleTagView: UIView {
 
     var tagTexts:Array<String> = []
     var eachNum:Int = 0
@@ -99,7 +99,7 @@ class MultiButtonTagView: UIView {
     
     //MARK: 点击
     
-    func buttonAction(button:UIButton) {
+    @objc func buttonAction(button:UIButton) {
         
         let tag = button.tag-101
         if (self.selectArray.contains(tag)) {
@@ -140,12 +140,10 @@ class MultiButtonTagView: UIView {
     }
     
     
-   class func  returnTextWidth(text:NSString,font:UIFont,viewWidth:CGFloat) -> CGSize {
-        var attr = Dictionary<String,AnyObject>()
-        attr[NSFontAttributeName] = font
+    class func  returnTextWidth(text:NSString,font:UIFont,viewWidth:CGFloat) -> CGSize {
+        let attr = Dictionary<NSAttributedStringKey,Any>()
         let textSize = text.boundingRect(with: CGSize(width:viewWidth,height:CGFloat(MAXFLOAT)), options:[.usesLineFragmentOrigin,.usesFontLeading], attributes: attr, context: nil).size
         return textSize
-        
     }
     
     
@@ -178,7 +176,7 @@ class MultiButtonTagView: UIView {
 
                 if i<tagTexts.count {
                     let textStr = tagTexts[i] as! NSString
-                    let itemWidth = MultiButtonTagView.returnTextWidth(text: textStr, font: tagTextFont!, viewWidth: viewWidth).width+20
+                    let itemWidth = MultipleTagView.returnTextWidth(text: textStr, font: tagTextFont!, viewWidth: viewWidth).width+20
                     totalWidth = totalWidth+CGFloat(itemWidth)+hmargin
                     if totalWidth - hmargin > viewWidth {
                         totalWidth = itemWidth+hmargin

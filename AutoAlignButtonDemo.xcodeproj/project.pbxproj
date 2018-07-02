@@ -9,15 +9,16 @@
 /* Begin PBXBuildFile section */
 		3402ED8A1F7102D100B46571 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402ED891F7102D100B46571 /* AppDelegate.swift */; };
 		3402ED911F7102D100B46571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3402ED901F7102D100B46571 /* Assets.xcassets */; };
-		3402ED941F7102D100B46571 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3402ED921F7102D100B46571 /* LaunchScreen.storyboard */; };
 		3402ED9F1F7102D100B46571 /* AutoAlignButtonDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402ED9E1F7102D100B46571 /* AutoAlignButtonDemoTests.swift */; };
 		3402EDAA1F7102D100B46571 /* AutoAlignButtonDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402EDA91F7102D100B46571 /* AutoAlignButtonDemoUITests.swift */; };
-		3402EDBA1F7102F100B46571 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402EDB71F7102F100B46571 /* ViewController.swift */; };
-		3402EDBB1F7102F100B46571 /* AutoAlignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402EDB81F7102F100B46571 /* AutoAlignButton.swift */; };
+		3402EDBA1F7102F100B46571 /* DynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402EDB71F7102F100B46571 /* DynamicViewController.swift */; };
+		3402EDBB1F7102F100B46571 /* AutoAlignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3402EDB81F7102F100B46571 /* AutoAlignView.swift */; };
 		3402EDBC1F7102F100B46571 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3402EDB91F7102F100B46571 /* Main.storyboard */; };
-		341688691F8B1FE20001D8D3 /* MultiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341688681F8B1FE20001D8D3 /* MultiViewController.swift */; };
-		3416886B1F8B200A0001D8D3 /* MultiButtonTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416886A1F8B200A0001D8D3 /* MultiButtonTagView.swift */; };
-		3416886D1F8B20A00001D8D3 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416886C1F8B209F0001D8D3 /* TagCell.swift */; };
+		341688691F8B1FE20001D8D3 /* MultipleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341688681F8B1FE20001D8D3 /* MultipleViewController.swift */; };
+		3416886B1F8B200A0001D8D3 /* MultipleTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416886A1F8B200A0001D8D3 /* MultipleTagView.swift */; };
+		3416886D1F8B20A00001D8D3 /* MultipleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416886C1F8B209F0001D8D3 /* MultipleCell.swift */; };
+		52699B1C20E9B75F006B97E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52699B1A20E9B75F006B97E1 /* LaunchScreen.storyboard */; };
+		52699B1D20E9B75F006B97E1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 52699B1B20E9B75F006B97E1 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,6 @@
 		3402ED861F7102D100B46571 /* AutoAlignButtonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoAlignButtonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3402ED891F7102D100B46571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3402ED901F7102D100B46571 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3402ED931F7102D100B46571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3402ED951F7102D100B46571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3402ED9A1F7102D100B46571 /* AutoAlignButtonDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoAlignButtonDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3402ED9E1F7102D100B46571 /* AutoAlignButtonDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAlignButtonDemoTests.swift; sourceTree = "<group>"; };
@@ -49,12 +49,14 @@
 		3402EDA51F7102D100B46571 /* AutoAlignButtonDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoAlignButtonDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3402EDA91F7102D100B46571 /* AutoAlignButtonDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoAlignButtonDemoUITests.swift; sourceTree = "<group>"; };
 		3402EDAB1F7102D100B46571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3402EDB71F7102F100B46571 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3402EDB81F7102F100B46571 /* AutoAlignButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoAlignButton.swift; sourceTree = "<group>"; };
+		3402EDB71F7102F100B46571 /* DynamicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicViewController.swift; sourceTree = "<group>"; };
+		3402EDB81F7102F100B46571 /* AutoAlignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoAlignView.swift; sourceTree = "<group>"; };
 		3402EDB91F7102F100B46571 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		341688681F8B1FE20001D8D3 /* MultiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiViewController.swift; sourceTree = "<group>"; };
-		3416886A1F8B200A0001D8D3 /* MultiButtonTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiButtonTagView.swift; sourceTree = "<group>"; };
-		3416886C1F8B209F0001D8D3 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
+		341688681F8B1FE20001D8D3 /* MultipleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewController.swift; sourceTree = "<group>"; };
+		3416886A1F8B200A0001D8D3 /* MultipleTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleTagView.swift; sourceTree = "<group>"; };
+		3416886C1F8B209F0001D8D3 /* MultipleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleCell.swift; sourceTree = "<group>"; };
+		52699B1A20E9B75F006B97E1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52699B1B20E9B75F006B97E1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,14 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				3402ED891F7102D100B46571 /* AppDelegate.swift */,
-				3402EDB71F7102F100B46571 /* ViewController.swift */,
-				341688681F8B1FE20001D8D3 /* MultiViewController.swift */,
-				3416886C1F8B209F0001D8D3 /* TagCell.swift */,
-				3402EDB81F7102F100B46571 /* AutoAlignButton.swift */,
-				3416886A1F8B200A0001D8D3 /* MultiButtonTagView.swift */,
+				52699B1820E9B5C8006B97E1 /* Dynamic */,
+				52699B1920E9B5E2006B97E1 /* Multiple */,
 				3402EDB91F7102F100B46571 /* Main.storyboard */,
 				3402ED901F7102D100B46571 /* Assets.xcassets */,
-				3402ED921F7102D100B46571 /* LaunchScreen.storyboard */,
+				52699B1B20E9B75F006B97E1 /* Default.png */,
+				52699B1A20E9B75F006B97E1 /* LaunchScreen.storyboard */,
 				3402ED951F7102D100B46571 /* Info.plist */,
 			);
 			path = AutoAlignButtonDemo;
@@ -135,6 +135,25 @@
 				3402EDAB1F7102D100B46571 /* Info.plist */,
 			);
 			path = AutoAlignButtonDemoUITests;
+			sourceTree = "<group>";
+		};
+		52699B1820E9B5C8006B97E1 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				3402EDB71F7102F100B46571 /* DynamicViewController.swift */,
+				3402EDB81F7102F100B46571 /* AutoAlignView.swift */,
+			);
+			path = Dynamic;
+			sourceTree = "<group>";
+		};
+		52699B1920E9B5E2006B97E1 /* Multiple */ = {
+			isa = PBXGroup;
+			children = (
+				341688681F8B1FE20001D8D3 /* MultipleViewController.swift */,
+				3416886C1F8B209F0001D8D3 /* MultipleCell.swift */,
+				3416886A1F8B200A0001D8D3 /* MultipleTagView.swift */,
+			);
+			path = Multiple;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,9 +264,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52699B1C20E9B75F006B97E1 /* LaunchScreen.storyboard in Resources */,
 				3402EDBC1F7102F100B46571 /* Main.storyboard in Resources */,
-				3402ED941F7102D100B46571 /* LaunchScreen.storyboard in Resources */,
 				3402ED911F7102D100B46571 /* Assets.xcassets in Resources */,
+				52699B1D20E9B75F006B97E1 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,12 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3402EDBA1F7102F100B46571 /* ViewController.swift in Sources */,
+				3402EDBA1F7102F100B46571 /* DynamicViewController.swift in Sources */,
 				3402ED8A1F7102D100B46571 /* AppDelegate.swift in Sources */,
-				3416886D1F8B20A00001D8D3 /* TagCell.swift in Sources */,
-				341688691F8B1FE20001D8D3 /* MultiViewController.swift in Sources */,
-				3416886B1F8B200A0001D8D3 /* MultiButtonTagView.swift in Sources */,
-				3402EDBB1F7102F100B46571 /* AutoAlignButton.swift in Sources */,
+				3416886D1F8B20A00001D8D3 /* MultipleCell.swift in Sources */,
+				341688691F8B1FE20001D8D3 /* MultipleViewController.swift in Sources */,
+				3416886B1F8B200A0001D8D3 /* MultipleTagView.swift in Sources */,
+				3402EDBB1F7102F100B46571 /* AutoAlignView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,17 +331,6 @@
 			targetProxy = 3402EDA61F7102D100B46571 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3402ED921F7102D100B46571 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3402ED931F7102D100B46571 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3402EDAC1F7102D100B46571 /* Debug */ = {
@@ -421,13 +430,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7QT42R489Z;
 				INFOPLIST_FILE = AutoAlignButtonDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = R.S..AutoAlignButtonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -435,13 +443,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7QT42R489Z;
 				INFOPLIST_FILE = AutoAlignButtonDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = R.S..AutoAlignButtonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

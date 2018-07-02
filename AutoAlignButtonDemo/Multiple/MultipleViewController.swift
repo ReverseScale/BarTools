@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MultiViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class MultipleViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     var listTableView:UITableView?
     
@@ -23,7 +23,7 @@ class MultiViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         listTableView?.dataSource = self
         listTableView?.delegate = self
-        listTableView?.register(TagCell.self, forCellReuseIdentifier: String(describing: TagCell.self))
+        listTableView?.register(MultipleCell.self, forCellReuseIdentifier: String(describing: MultipleCell.self))
         view.addSubview(listTableView!)
     }
 
@@ -32,9 +32,9 @@ class MultiViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         // Dispose of any resources that can be recreated.
     }
 }
-extension MultiViewController {
+extension MultipleViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView .dequeueReusableCell(withIdentifier: String(describing: TagCell.self)) as! TagCell
+        let cell = tableView .dequeueReusableCell(withIdentifier: String(describing: MultipleCell.self)) as! MultipleCell
         cell.setTextArray(textArray: self.dataArray as NSArray, row: indexPath.section)
         return cell;
     }
@@ -49,6 +49,6 @@ extension MultiViewController {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return TagCell.cellHeight(textArray: self.dataArray as NSArray, row: indexPath.section)
+        return MultipleCell.cellHeight(textArray: self.dataArray as NSArray, row: indexPath.section)
     }
 }
