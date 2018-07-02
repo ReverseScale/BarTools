@@ -37,12 +37,14 @@ class AutoAlignView: UIView {
         self.backgroundColor = UIColor.white
         self.setupScrollView()
     }
+    
     func setupScrollView() {
         scrollView.backgroundColor = UIColor.white
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
         self.addSubview(scrollView)
     }
+    
     private func setupViews() {
         self.layoutSubviews()
     }
@@ -65,7 +67,7 @@ class AutoAlignView: UIView {
             titleSize.height += 15
             titleSize.width += 20
             widthOfButtonArray[i + 1] = titleSize.width
-            buttonOfX = 3 + CGFloat(widthOfButtonArray[i] as! NSNumber) + buttonOfX
+            buttonOfX = 3 + CGFloat(truncating: widthOfButtonArray[i] as! NSNumber) + buttonOfX
             btn?.frame = CGRect(x:buttonOfX, y:4, width:titleSize.width, height:titleSize.height)
             
             all = 0
