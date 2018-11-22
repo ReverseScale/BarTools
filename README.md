@@ -6,7 +6,7 @@
 
 | 展示列表 | 自动排版 | 更新自动排版 | 复选排版 |
 | ------------- | ------------- | ------------- | ------------- |
-| ![](http://og1yl0w9z.bkt.clouddn.com/18-7-2/77947428.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-7-2/14086619.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-7-2/57675645.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-7-2/14345509.jpg) |
+| ![](http://ghexoblogimages.oss-cn-beijing.aliyuncs.com/18-11-22/24261964.jpg) | ![](http://ghexoblogimages.oss-cn-beijing.aliyuncs.com/18-11-22/90582443.jpg) | ![](http://ghexoblogimages.oss-cn-beijing.aliyuncs.com/18-11-22/70739061.jpg) | ![](http://ghexoblogimages.oss-cn-beijing.aliyuncs.com/18-11-22/95526263.jpg) |
 
 
 ## 🛠 使用
