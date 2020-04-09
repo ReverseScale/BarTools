@@ -10,59 +10,30 @@
 
 ## 🛠 使用
 
-### 1.简单的单行单选使用
+### 简单的单行单选使用
 ```swift
 /// 声明控件
-    lazy var autoBtn:AutoAlignView = {
-        let btn = AutoAlignView()
-        btn.delegate = self
-        btn.bordersColor = UIColor.brown
-        btn.textColor = UIColor.brown
-        btn.font = UIFont.systemFont(ofSize: 13)
-        return btn
+    lazy var barTools: BarToolsView = {
+        let barTools = BarToolsView()
+        barTools.delegate = self
+        barTools.bordersColor = UIColor.brown
+        barTools.textColor = UIColor.brown
+        barTools.font = UIFont.systemFont(ofSize: 13)
+        return barTools
     }()
 /// 数据源
-    var listArray = NSMutableArray() {
-        didSet{
-            autoBtn.itemsArray = listArray
+    itemsArray = ["你好", "Hello", "안녕하세요", "Bonjour", "Hallo", "Привет", "こんにちは", "hej", "tere"]
+```
+
+加载及更新数据响应
+
+```swift
+   var itemsArray: [String] = [String]() {
+        didSet {
+            barTools.itemsArray = itemsArray
         }
     }
 ```
-
-放置控件
-
-```swift
-    func setupAutoButton() {
-        self.view.addSubview(autoBtn)
-        // Snapkit ..
-        autoBtn.frame = CGRect(x:0, y:view.frame.size.height - 59, width:view.frame.size.width, height:39)
-    }
-```
-
-加载及更新数据
-
-```swift
-   listArray = ["人参","鳖","白吃丸吃丸","欧赔","龟苓膏","华佗金散","鹤顶红","华佗金散","鹤顶红","人参","鳖"]
-```
-
-### 2.简单的多行多选使用
-```swift
-    var dataArray:Array<Any>{
-        return ["人参","鳖","白吃丸吃丸","欧赔","龟苓膏","华佗金散","鹤顶红","华佗金散","鹤顶红","人参","鳖","鳖","白吃丸吃丸","欧赔","龟苓膏","华佗金散","鹤顶红","华佗金散","鹤顶红","人参","鳖","鳖","白吃丸吃丸","欧赔","龟苓膏","华佗金散","鹤顶红","华佗金散","鹤顶红","人参","鳖"]
-    }
-```
-
-tableView 的 Cell 实现
-
-```swift
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView .dequeueReusableCell(withIdentifier: String(describing: MultipleCell.self)) as! MultipleCell
-        cell.setTextArray(textArray: self.dataArray as NSArray, row: indexPath.section)
-        return cell;
-    }
-```
-
-> 随意整理一下，结构不是很好，仅供参考吧~
 
 ## 😬  联系
 
