@@ -6,8 +6,7 @@
 
 | 展示列表 | 自动排版 | 更新自动排版 | 复选排版 |
 | ------------- | ------------- | ------------- | ------------- |
-| ![](http://ghexoblogimages.oss-cn-beijing.aliyuncs.com/18-11-22/24261964.jpg) | ![](http://ghexoblogimages.oss-cn-beijing.aliyuncs.com/18-11-22/90582443.jpg) | ![](http://ghexoblogimages.oss-cn-beijing.aliyuncs.com/18-11-22/70739061.jpg) | ![](http://ghexoblogimages.oss-cn-beijing.aliyuncs.com/18-11-22/95526263.jpg) |
-
+| ![](https://s1.ax1x.com/2020/04/09/G4UcPx.png) | ![](https://s1.ax1x.com/2020/04/09/G4UU2T.png) | ![](https://s1.ax1x.com/2020/04/09/G4U0r4.png) | ![](https://s1.ax1x.com/2020/04/09/G4UrZ9.png) |
 
 ## 🛠 使用
 
