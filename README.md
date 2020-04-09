@@ -13,26 +13,26 @@
 ### 简单的单行单选使用
 ```swift
 /// 声明控件
-    lazy var barTools: BarToolsView = {
-        let barTools = BarToolsView()
-        barTools.delegate = self
-        barTools.bordersColor = UIColor.brown
-        barTools.textColor = UIColor.brown
-        barTools.font = UIFont.systemFont(ofSize: 13)
-        return barTools
-    }()
+lazy var barTools: BarToolsView = {
+    let barTools = BarToolsView()
+    barTools.delegate = self
+    barTools.bordersColor = UIColor.brown
+    barTools.textColor = UIColor.brown
+    barTools.font = UIFont.systemFont(ofSize: 13)
+    return barTools
+}()
 /// 数据源
-    itemsArray = ["你好", "Hello", "안녕하세요", "Bonjour", "Hallo", "Привет", "こんにちは", "hej", "tere"]
+itemsArray = ["你好", "Hello", "안녕하세요", "Bonjour", "Hallo", "Привет", "こんにちは", "hej", "tere"]
 ```
 
 加载及更新数据响应
 
 ```swift
-   var itemsArray: [String] = [String]() {
-        didSet {
-            barTools.itemsArray = itemsArray
-        }
+var itemsArray: [String] = [String]() {
+    didSet {
+        barTools.itemsArray = itemsArray
     }
+}
 ```
 
 ## 😬  联系
